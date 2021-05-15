@@ -318,7 +318,12 @@
         var together = new Date();
         var strs = "2019-09-09 22:00:00";
         var nowTime = new Date();
-        var together = new Date(strs.replace(/-/g, "/"));
+        var together = new Date();
+        together.setFullYear(2019, 8, 9);
+		together.setHours(22);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
         timeElapse(together);
         setInterval(function () { timeElapse(together); }, 500);
         function timeElapse(c) {
